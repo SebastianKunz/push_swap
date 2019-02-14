@@ -6,7 +6,7 @@
 /*   By: skunz <skunz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/08 19:07:04 by skunz             #+#    #+#             */
-/*   Updated: 2019/02/10 11:52:31 by skunz            ###   ########.fr       */
+/*   Updated: 2019/02/13 14:29:15 by skunz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,12 @@ int		populate_stack(t_stack *a, int argc, char **argv) // bottleneck in checking
 		if (!is_valid(argv[argc]))
 			return (0);
 		push(a, ft_atoi(argv[argc]));
-		while (a->size > 1 && ++j < a->size)
-		{
-			if (a->top->data == a->top->next->data)
-				return (0);
-			a->top = a->top->next;
-		}
+		// while (a->size > 1 && ++j < a->size)
+		// {
+		// 	if (a->top->data == a->top->next->data)
+		// 		return (0);
+		// 	a->top = a->top->next;
+		// }
 	}
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: skunz <skunz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/07 17:38:51 by skunz             #+#    #+#             */
-/*   Updated: 2019/02/10 11:58:35 by skunz            ###   ########.fr       */
+/*   Updated: 2019/02/13 14:30:49 by skunz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	execute(t_stack *a, t_stack *b, int idx)
 	idx == 5 ? rotate(a, UP) : 0;
 	idx == 6 ? rotate(b, UP) : 0;
 	idx == 7 ? rotate_both(a, b, UP) : 0;
-	idx == 7 ? rotate(a, DOWN) : 0;
+	idx == 8 ? rotate(a, DOWN) : 0;
 	idx == 9 ? rotate(b, DOWN) : 0;
 	idx == 10 ? rotate_both(a, b, DOWN) : 0;
 }
@@ -97,6 +97,7 @@ int		main(int argc, char **argv)
 			if ((index = get_index(op, tab)) == -1)
 				exit(ft_error(e_invalid));
 			execute(&a, &b, index);
+			// printf("%s: index: %d\n", op, index);
 			// print_stack(a, "A");
 			// print_stack(b, "B");
 			free(op);
@@ -106,7 +107,7 @@ int		main(int argc, char **argv)
 		// push_to(&b, &a);
 		// print_stack(a, "A");
 		// rotate(&a, UP);
-		// print_stack(a, "A");
+		print_stack(a, "A");
 		check_sorted(a, b);
 		ft_free2d((void**)tab, 11);
 	}

@@ -6,7 +6,7 @@
 /*   By: skunz <skunz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/07 17:38:57 by skunz             #+#    #+#             */
-/*   Updated: 2019/02/10 11:53:46 by skunz            ###   ########.fr       */
+/*   Updated: 2019/02/13 15:00:53 by skunz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,9 +97,9 @@ void	print_stack(t_stack stack, char *name)
 
 	i = 0;
 	printf("==%s==\n", name);
-	printf("SIZE %d\n", stack.size);
-	printf("MIN %d\n", stack.min);
-	printf("MAX %d\n", stack.max);
+	// printf("SIZE %d\n", stack.size);
+	// printf("MIN %d\n", stack.min);
+	// printf("MAX %d\n", stack.max);
 	while (++i < stack.size + 1)
 	{
 		printf("%d\n", stack.top->data);
